@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 #!flask/bin/python
 
-# pip install flask
-# pip install flask-admin
-# pip install Flask-BasicAuth
-
+# pip install -r requirements.txt
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
