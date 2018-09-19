@@ -1,5 +1,5 @@
 # flask_crud
-Exemplo de  Crud simples (cadastro, edição, exclusão, busca) com Flask e Flask Admin
+A simple CRUD example (add, edit, delete, search) made in Flask. Contains Flask Admin.
 
 #### To run this example:
 
