@@ -38,6 +38,7 @@ python app.py
 ## Tested with
 
 ```
+Ubuntu 22.04 LTS
 flask-3.0.3
 Flask_Admin-1.6.1
 flask_sqlalchemy-3.1.1
