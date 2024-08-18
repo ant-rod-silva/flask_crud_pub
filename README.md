@@ -34,3 +34,12 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
+
+## Tested with
+
+```
+flask-3.0.3
+Flask_Admin-1.6.1
+flask_sqlalchemy-3.1.1
+flask_security-5.5.2
+```
