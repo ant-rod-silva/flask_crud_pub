@@ -19,8 +19,8 @@ cd flask_crud
 ### Create and activate a virtual environment:
 
 ```
-virtualenv env
-source env/bin/activate
+virtualenv flask_crud_env
+source flask_crud_env/bin/activate
 ```
 
 ### Install requirements:
