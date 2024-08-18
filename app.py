@@ -1,26 +1,22 @@
 # -*- coding: utf-8 -*-
 #!flask/bin/python
 
-# pip install -r requirements.txt
-
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import flask_admin as admin
-from flask_admin.contrib import sqla
 from flask_admin.contrib.sqla import ModelView
 
 # Create application
 app = Flask(__name__)
 app.debug = True
 
-# Create dummy secrey key so we can use sessions
+# Create dummy secret key so we can use sessions
 app.config['SECRET_KEY'] = '123456790'
 
 # Create in-memory database
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///car.sqlite'
 db = SQLAlchemy(app)
 #app.config['SQLALCHEMY_ECHO'] = True
-
 
 # Flask views
 @app.route('/')
@@ -36,7 +32,7 @@ class CarUserView(ModelView):
     can_edit = True
     can_delete = False  # disable model deletion
     can_view_details = True
-    page_size = 2  # paginacao
+    page_size = 2  # pagination
     create_modal = True
     edit_modal = True
     can_export = True
@@ -57,7 +53,6 @@ class CarAdminView(ModelView):
     can_export = True
 
 class Car(db.Model):
-    #__tablename__ = 'car'
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     desc = db.Column(db.String(50))
 
@@ -69,8 +64,8 @@ admin = admin.Admin(app, name='App', template_mode='bootstrap3')
 admin.add_view(CarAdminView(Car, db.session))
 
 if __name__ == '__main__':
-    # Create DB
-    db.create_all()
+    # Create DB within the application context
+    with app.app_context():
+        db.create_all()
     # Start app
-app.run(debug=True)
-
+    app.run(debug=True)
