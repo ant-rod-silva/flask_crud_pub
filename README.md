@@ -13,7 +13,7 @@ sudo apt install git
 
 ```
 git clone https://github.com/ant-rod-silva/flask_crud.git
-cd flask-crud
+cd flask_crud
 ```
 
 ### Create and activate a virtual environment:
