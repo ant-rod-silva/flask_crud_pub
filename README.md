@@ -3,10 +3,10 @@ A simple CRUD example (add, edit, delete, search) made in Flask. Contains Flask 
 
 ## To run this example:
 
-### Install Git
+### Install Git and python3-virtualenv
 
 ```
-sudo apt install git
+sudo apt install git python3-virtualenv
 ```
 
 ### Clone the repository:
